@@ -1,7 +1,0 @@
-C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Code\XmlRpcClient\bin\Release\XmlRpcClient.dll
-C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Code\XmlRpcClient\bin\Release\XmlRpcClient.pdb
-C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Code\XmlRpcClient\bin\Release\Utilities.dll
-C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Code\XmlRpcClient\bin\Release\Utilities.pdb
-C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Code\XmlRpcClient\obj\Release\XmlRpcClient.csprojResolveAssemblyReference.cache
-C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Code\XmlRpcClient\obj\Release\XmlRpcClient.dll
-C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Code\XmlRpcClient\obj\Release\XmlRpcClient.pdb
