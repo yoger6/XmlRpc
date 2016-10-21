@@ -1,0 +1,17 @@
+C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Test\XmlRpcClientTest\bin\Release\XmlRpcClientTest.dll
+C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Test\XmlRpcClientTest\bin\Release\XmlRpcClientTest.pdb
+C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Test\XmlRpcClientTest\bin\Release\Castle.Core.dll
+C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Test\XmlRpcClientTest\bin\Release\Moq.dll
+C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Test\XmlRpcClientTest\bin\Release\nunit.framework.dll
+C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Test\XmlRpcClientTest\bin\Release\UnitTesting.dll
+C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Test\XmlRpcClientTest\bin\Release\XmlRpcClient.dll
+C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Test\XmlRpcClientTest\bin\Release\Utilities.dll
+C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Test\XmlRpcClientTest\bin\Release\UnitTesting.pdb
+C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Test\XmlRpcClientTest\bin\Release\XmlRpcClient.pdb
+C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Test\XmlRpcClientTest\bin\Release\Castle.Core.xml
+C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Test\XmlRpcClientTest\bin\Release\Moq.xml
+C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Test\XmlRpcClientTest\bin\Release\nunit.framework.xml
+C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Test\XmlRpcClientTest\bin\Release\Utilities.pdb
+C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Test\XmlRpcClientTest\obj\Release\XmlRpcClientTest.csprojResolveAssemblyReference.cache
+C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Test\XmlRpcClientTest\obj\Release\XmlRpcClientTest.dll
+C:\Users\yoger\OneDrive\Sources\MovieOrganizer\Test\XmlRpcClientTest\obj\Release\XmlRpcClientTest.pdb
