@@ -98,7 +98,6 @@ namespace XmlRpcClient
 
         private void GenerateShortcutForMembers( RawResponse rawResponse )
         {
-            //Members = rawResponse.Parameters.Parameters.First().RawResponseStruct.Members;
             Members = rawResponse.Parameters.Parameters.First().ParameterValue.RawResponseStruct.Members;
         }
 

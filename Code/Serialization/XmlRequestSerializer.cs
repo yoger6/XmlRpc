@@ -54,7 +54,9 @@ namespace XmlRpcClient.Serialization
                 valueRoot.Add( arrayRoot );
                 var dataRoot = new XElement( "data" );
                 arrayRoot.Add( dataRoot );
-
+                //TODO: maybe fix that already :P
+                //But it works
+                //TODO: doesn't matter
                 foreach ( var value in parameter.Value as IEnumerable<string> )
                 {
                     var rpc = new RpcMessageParameter( value );

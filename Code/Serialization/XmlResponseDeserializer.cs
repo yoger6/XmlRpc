@@ -9,7 +9,7 @@ namespace XmlRpcClient.Serialization
     /// </summary>
     public class XmlResponseDeserializer : IResponseDeserializer
     {
-        private XmlSerializer _serializer = new XmlSerializer( typeof(RawResponse) );
+        private readonly XmlSerializer _serializer = new XmlSerializer( typeof(RawResponse) );
         
         /// <summary>
         /// Deserializes given stream into RawResponse
