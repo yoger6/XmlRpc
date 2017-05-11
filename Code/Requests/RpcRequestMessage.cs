@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace XmlRpcClient
+namespace XmlRpcClient.Requests
 {
     /// <summary>
     /// Message that can be serialized into RPC data format and sent to the server

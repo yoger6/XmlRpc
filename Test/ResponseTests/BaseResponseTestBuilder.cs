@@ -1,6 +1,6 @@
-using XmlRpcClient;
+using XmlRpcClient.Responses;
 
-namespace Test.XmlRpcClient
+namespace Test.XmlRpcClient.ResponseTests
 {
     internal class BaseResponseTestBuilder : ResponseBuilder<ResponseBase>
     {

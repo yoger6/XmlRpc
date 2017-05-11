@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace XmlRpcClient
+namespace XmlRpcClient.Requests
 {
     /// <summary>
     /// Provides convinient way for getting HttpWebRequest

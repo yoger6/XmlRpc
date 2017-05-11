@@ -1,6 +1,6 @@
-using XmlRpcClient;
+using XmlRpcClient.Requests;
 
-namespace Test.XmlRpcClient
+namespace Test.XmlRpcClient.RequestsTests
 {
     internal class RpcTestRequest : RpcRequest
     {

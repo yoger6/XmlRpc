@@ -1,3 +1,5 @@
+using XmlRpcClient.Requests;
+
 namespace XmlRpcClient.Serialization
 {
     /// <summary>

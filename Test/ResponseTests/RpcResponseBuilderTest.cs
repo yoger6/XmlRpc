@@ -1,8 +1,8 @@
 using System;
 using NUnit.Framework;
-using XmlRpcClient;
+using XmlRpcClient.Responses;
 
-namespace Test.XmlRpcClient
+namespace Test.XmlRpcClient.ResponseTests
 {
     [TestFixture]
     public class RpcResponseBuilderTest

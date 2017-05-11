@@ -1,11 +1,14 @@
 using System;
 using System.Net;
-using Common.UnitTesting;
+using Common.UnitTesting.Mocks;
 using Moq;
+using Test.XmlRpcClient.RequestsTests;
 using XmlRpcClient;
+using XmlRpcClient.Requests;
+using XmlRpcClient.Responses;
 using XmlRpcClient.Serialization;
 
-namespace Test.XmlRpcClient
+namespace Test.XmlRpcClient.ClientTests
 {
     internal class RpcTestClient : RpcClient
     {

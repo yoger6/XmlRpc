@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace XmlRpcClient
+namespace XmlRpcClient.Requests
 {
     /// <summary>
     /// Default request factory, provides requests from static WebRequest factory method.

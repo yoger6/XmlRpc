@@ -1,6 +1,6 @@
 using System;
 
-namespace XmlRpcClient
+namespace XmlRpcClient.Responses
 {
     /// <summary>
     /// Base for Response builder providing hacky way of getting right builder from collection.

@@ -1,11 +1,14 @@
 ﻿using System;
-using Common.UnitTesting;
+using Common.UnitTesting.Assertions;
+using Common.UnitTesting.Mocks;
 using Moq;
 using NUnit.Framework;
-using XmlRpcClient;
+using Test.XmlRpcClient.ResponseTests;
+using XmlRpcClient.Requests;
+using XmlRpcClient.Responses;
 using XmlRpcClient.Serialization;
 
-namespace Test.XmlRpcClient
+namespace Test.XmlRpcClient.ClientTests
 {
     [TestFixture]
     public class RpcClientTest

@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Net;
 using NUnit.Framework;
-using XmlRpcClient;
+using XmlRpcClient.Requests;
 
-namespace Test.XmlRpcClient
+namespace Test.XmlRpcClient.RequestsTests
 {
     [TestFixture]
     public class HttpRequestFactoryTest
     {
-        private HttpRequestFactory _factory = new HttpRequestFactory();
-        private Uri _validUri = new Uri( "http://google.com" );
+        private readonly HttpRequestFactory _factory = new HttpRequestFactory();
+        private readonly Uri _validUri = new Uri( "http://google.com" );
 
         [Test]
         public void GetRequest_ReturnsRequest_ThatIsNotNull()

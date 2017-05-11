@@ -1,6 +1,6 @@
 using System.Net;
 
-namespace XmlRpcClient
+namespace XmlRpcClient.Responses
 {
     /// <summary>
     /// Represents basic data retrieved with request.

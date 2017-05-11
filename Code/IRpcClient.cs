@@ -1,4 +1,7 @@
-﻿namespace XmlRpcClient
+﻿using XmlRpcClient.Requests;
+using XmlRpcClient.Responses;
+
+namespace XmlRpcClient
 {
     public interface IRpcClient
     {

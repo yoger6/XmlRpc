@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace XmlRpcClient
+namespace XmlRpcClient.Responses
 {
     /// <summary>
     /// Contains collection of response builders for different types of Response.

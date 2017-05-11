@@ -1,6 +1,6 @@
 using System;
 
-namespace XmlRpcClient
+namespace XmlRpcClient.Requests
 {
     public class RpcMessageParameter
     {

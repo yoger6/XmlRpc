@@ -5,7 +5,7 @@ using System.Net;
 using System.Text.RegularExpressions;
 using XmlRpcClient.Serialization.RawResponses;
 
-namespace XmlRpcClient
+namespace XmlRpcClient.Responses
 {
     /// <summary>
     /// Builder class for converting RawResponse into structured one that derives from ResponseBase

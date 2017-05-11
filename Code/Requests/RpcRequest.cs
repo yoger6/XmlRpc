@@ -3,7 +3,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Net;
 
-namespace XmlRpcClient
+namespace XmlRpcClient.Requests
 {
     /// <summary>
     /// HttpWebRequest wrapper specificly designed for XML-RPC requests
@@ -69,22 +69,37 @@ namespace XmlRpcClient
         /// <param name="data">Text to send</param>
         public void Send( string data )
         {
-            using (var compressedStream = new GZipStream( Request.GetRequestStream(), CompressionMode.Compress ))
+            try
             {
-                using (var writer = new StreamWriter( compressedStream ))
+                using (var compressedStream = new GZipStream(Request.GetRequestStream(), CompressionMode.Compress))
                 {
-                    writer.Write( data );
+                    using (var writer = new StreamWriter(compressedStream))
+                    {
+                        writer.Write(data);
+                    }
                 }
+            }
+            catch ( WebException e )
+            {
+                throw new RpcException( "Connection error while sending request.", e );
             }
         }
 
         /// <summary>
         /// Returns response from server
         /// </summary>
+        /// TODO:503
         /// <returns>Web Response</returns>
         public WebResponse GetResponse()
         {
-            return Request.GetResponse();
+            try
+            {
+                return Request.GetResponse();
+            }
+            catch ( WebException e )
+            {
+                throw new RpcException( "Connection error while receiving response", e );
+            }
         }
 
         private void SetupRequest()

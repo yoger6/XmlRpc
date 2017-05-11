@@ -2,12 +2,14 @@
 using System.IO;
 using System.IO.Compression;
 using System.Net;
-using Common.UnitTesting;
+using Common.UnitTesting.Mocks;
+using FluentAssertions;
 using Moq;
 using NUnit.Framework;
 using XmlRpcClient;
+using XmlRpcClient.Requests;
 
-namespace Test.XmlRpcClient
+namespace Test.XmlRpcClient.RequestsTests
 {
     [TestFixture]
     public class XmlRpcRequestTest
@@ -32,7 +34,7 @@ namespace Test.XmlRpcClient
             _factory = new Mock<IHttpRequestFactory>();
             _factory.Setup( x => x.GetRequest( GetValidHttpsUri() ) ).Returns( _requestMock.Object );
         }
-        
+
         [Test]
         public void Ctor_SetsHttpsUri()
         {
@@ -73,10 +75,10 @@ namespace Test.XmlRpcClient
             Assert.True( IsCompressionEnabled( request ) );
         }
 
-        private bool IsCompressionEnabled(RpcRequest request)
+        private bool IsCompressionEnabled( RpcRequest request )
         {
             return request.Headers[HttpRequestHeader.AcceptEncoding] == "gzip"
-                && request.Headers[HttpRequestHeader.ContentEncoding] == "gzip";
+                   && request.Headers[HttpRequestHeader.ContentEncoding] == "gzip";
         }
 
         [Test]
@@ -103,9 +105,9 @@ namespace Test.XmlRpcClient
 
         private string DecompressWrittenData( Stream stream )
         {
-            using (var decompressionStream = new GZipStream( stream, CompressionMode.Decompress ))
+            using ( var decompressionStream = new GZipStream( stream, CompressionMode.Decompress ) )
             {
-                using (var reader = new StreamReader( decompressionStream ))
+                using ( var reader = new StreamReader( decompressionStream ) )
                 {
                     return reader.ReadToEnd();
                 }
@@ -117,12 +119,39 @@ namespace Test.XmlRpcClient
         {
             var request = GetMockedRequest();
 
-            using (var response = request.GetResponse())
+            using ( var response = request.GetResponse() )
             {
                 _requestMock.Verify( x => x.GetResponse() );
             }
         }
-        
+
+        [Test]
+        public void ShouldThrow_WhenRequestSendingWasUnsuccessfull()
+        {
+            // given
+            var request = GetMockedRequest();
+            _requestMock.Setup(r => r.GetRequestStream()).Throws<WebException>();
+            // when
+            var action = new Action( () => request.Send( "something something" ) );
+
+            // then
+            action.ShouldThrowExactly<RpcException>();
+        }
+
+        [Test]
+        public void ShouldThrow_WhenResponseReceivingFailed()
+        {
+            // given
+            var request = GetMockedRequest();
+            _requestMock.Setup( r => r.GetResponse() ).Throws<WebException>();
+
+            // when
+            var action = new Action( () => request.GetResponse() );
+
+            // then
+            action.ShouldThrowExactly<RpcException>();
+        }
+
         private Uri GetValidHttpsUri()
         {
             var builder = new UriBuilder( Scheme, Host, Port, Path );
